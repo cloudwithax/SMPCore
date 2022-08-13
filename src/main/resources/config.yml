@@ -1,0 +1,12 @@
+# Config file for SMP Core
+accent_color: GREEN
+server_name: "The Default SMP"
+motds: [
+  "welcome to the smp",
+  "this is a second motd"
+]
+
+join_motd: [
+  "this is line one",
+  "this is line two"
+]

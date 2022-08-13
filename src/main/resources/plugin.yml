@@ -1,0 +1,69 @@
+name: SMPCore
+version: '${project.version}'
+main: me.cloud.smpcore.Plugin
+api-version: 1.18
+prefix: SMP Core
+load: STARTUP
+authors: [ cloudwithax ]
+description: The core for any SMP you will ever need, ever.
+
+commands:
+  playtime:
+    description: Shows how much time you played on the server
+    usage: /<command>
+  ping:
+    description: Shows your ping to the server
+    usage: /<command>
+  alert:
+    description: Sends a message to all players on the server
+    permission: smp.owner
+    usage: /<command> [text]
+  gms:
+    description: Alias for /gamemode survival
+    permission: smp.owner
+    usage: /<command>
+  gma:
+    description: Alias for /gamemode adventure
+    permission: smp.owner
+    usage: /<command>
+  gmsp:
+    description: Alias for /gamemode spectator
+    permission: smp.owner
+    usage: /<command>
+  gmc:
+    description: Alias for /gamemode creative
+    permission: smp.owner
+    usage: /<command>
+  msg:
+    description: Messages a player
+    usage: /<command> [player] [message]
+  r:
+    description: Replies to a player
+    usage: /<command> [message]
+  vanish:
+    aliases: [ "v" ]
+    permission: smp.owner
+    description: Toggles vanish mode
+    usage: /<command>
+  usage:
+    permission: smp.owner
+    description: Shows server usage and resources
+    usage: /<command>
+  smpreload:
+    permission: smp.owner
+    description: Reloads the config
+    usage: /<command>
+  heal:
+    permission: smp.owner
+    description: Heals a player or all players using '*'
+    usage: /<command> [player|*]
+
+permissions:
+  smp.owner:
+    description: Allows access to owner-only commands
+    default: op
+  smp.*:
+    description: Base permission for smp
+    default: op
+    children:
+      smp.owner: true
