@@ -74,11 +74,13 @@ public class Plugin extends JavaPlugin {
     @Override
     public void reloadConfig() {
         super.reloadConfig();
-
-        saveDefaultConfig();
-        config = getConfig();
-        config.options().copyDefaults(true);
+        accentColor = ChatColor.valueOf(getConfig().getString("accent_color"));
+        motds = (ArrayList<String>) getConfig().getStringList("motds");
+        joinMOTD = (ArrayList<String>) getConfig().getStringList("join_motd");
+        serverName = getConfig().getString("server_name");
         saveConfig();
+
+
     }
 
     public String formatDuration(Duration duration) {

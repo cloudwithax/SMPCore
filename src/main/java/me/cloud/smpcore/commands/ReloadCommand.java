@@ -22,6 +22,7 @@ public class ReloadCommand implements CommandExecutor {
         if (sender != null) {
             try {
                 plugin.reloadConfig();
+                player.sendMessage(ChatColor.GREEN + "Plugin config reloaded!");
             } catch (Exception e){
                 player.sendMessage(ChatColor.RED + "Hey stupid! Check the console, you fucked up.");
             }
